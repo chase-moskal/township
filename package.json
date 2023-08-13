@@ -1,0 +1,40 @@
+{
+	"name": "@benev/township",
+	"version": "0.0.0-dev.0",
+	"description": "world simulator",
+	"license": "MIT",
+	"author": "Chase Moskal <chasemoskal@gmail.com>",
+	"type": "module",
+	"main": "x/index.js",
+	"files": [
+		"x",
+		"s"
+	],
+	"scripts": {
+		"build": "run-s clean compile",
+		"clean": "rm -rf x && mkdir x",
+		"compile": "tsc",
+		"start": "run-p watch",
+		"watch": "tsc -w",
+		"watchtest": "chokidar 'x/**/*.js' -c 'npm test'",
+		"test": "cynic node x/tests.test.js"
+	},
+	"devDependencies": {
+		"@types/node": "^20.4.9",
+		"chokidar-cli": "^3.0.0",
+		"cynic": "^0.2.1",
+		"npm-run-all": "^4.1.5",
+		"typescript": "^5.1.6"
+	},
+	"keywords": [
+		"simulator"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/benevolent-games/township.git"
+	},
+	"bugs": {
+		"url": "https://github.com/benevolent-games/township/issues"
+	},
+	"homepage": "https://github.com/benevolent-games/township#readme"
+}
